@@ -1,27 +1,36 @@
-# Angular
+angular-loading-bar
+===================
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Usage
 
-## Development server
+ * install via npm:
+   ```
+   npm install @loadingio/angular-loading-bar
+   ```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ * include in app.module.ts:
+   ```
+   import { AngularLoadingBarComponent } from '@loadingio/angular-loading-bar';
+   @NgModule({
+     declarations: [
+       AppComponent,
+       AngularLoadingBarComponent
+       ...
+     ],
+     ...
+   ```
 
-## Code scaffolding
+ * use selector `ld-bar` to add a ldBar component:
+   ```
+   <ld-bar [config]="config" [value]="value"></ld-bar>
+   ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ * use ```value``` for updating its value, and ```config``` for initializing options. You can also config it via data-* prefix:
+   ```
+   <ld-bar data-preset="circle"></ld-bar>
+   ```
 
-## Build
+License
+-------------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT
