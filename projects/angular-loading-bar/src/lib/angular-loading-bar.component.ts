@@ -38,7 +38,6 @@ export class AngularLoadingBarComponent implements OnInit {
         config[attributes[i].name.replace("data-","")] = attributes[i].value;
       }
     }
-    console.log(config);
     this.ldbar = new ldBar(element, config);
   }
 }
